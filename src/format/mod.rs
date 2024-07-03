@@ -204,7 +204,6 @@ where
         let mut ps = avformat_alloc_context();
         let path = from_path(path);
         (*ps).interrupt_callback = interrupt::new(Box::new(closure)).interrupt;
-        (*ps).skip_initial_bytes = 0;
 
         match avformat_open_input(&mut ps, path.as_ptr(), ptr::null_mut(), ptr::null_mut()) {
             0 => match avformat_find_stream_info(ps, ptr::null_mut()) {

@@ -16,7 +16,7 @@ pub struct Definition {
 pub struct Context {
     ptr: *mut SwsContext,
 
-    input: Definition,
+    pub input: Definition,
     output: Definition,
 }
 
@@ -155,7 +155,7 @@ impl Context {
                 (*input.as_ptr()).linesize.as_ptr() as *const _,
                 0,
                 self.input.height as c_int,
-                (*output.as_mut_ptr()).data.as_ptr() as *const *mut _,
+                (*output.as_mut_ptr()).data.as_ptr(),
                 (*output.as_mut_ptr()).linesize.as_ptr() as *mut _,
             );
         }

@@ -368,8 +368,52 @@ pub enum Pixel {
     #[cfg(feature = "ffmpeg_5_0")]
     P416LE,
 
-    #[cfg(feature = "rpi")]
-    RPI,
+    #[cfg(feature = "ffmpeg_6_0")]
+    VUYA,
+    #[cfg(feature = "ffmpeg_6_0")]
+    RGBAF16BE,
+    #[cfg(feature = "ffmpeg_6_0")]
+    RGBAF16LE,
+    #[cfg(feature = "ffmpeg_6_0")]
+    VUYX,
+    #[cfg(feature = "ffmpeg_6_0")]
+    P012LE,
+    #[cfg(feature = "ffmpeg_6_0")]
+    P012BE,
+    #[cfg(feature = "ffmpeg_6_0")]
+    Y212BE,
+    #[cfg(feature = "ffmpeg_6_0")]
+    Y212LE,
+    #[cfg(feature = "ffmpeg_6_0")]
+    XV30BE,
+    #[cfg(feature = "ffmpeg_6_0")]
+    XV30LE,
+    #[cfg(feature = "ffmpeg_6_0")]
+    XV36BE,
+    #[cfg(feature = "ffmpeg_6_0")]
+    XV36LE,
+    #[cfg(feature = "ffmpeg_6_0")]
+    RGBF32BE,
+    #[cfg(feature = "ffmpeg_6_0")]
+    RGBF32LE,
+    #[cfg(feature = "ffmpeg_6_0")]
+    RGBAF32BE,
+    #[cfg(feature = "ffmpeg_6_0")]
+    RGBAF32LE,
+
+    #[cfg(feature = "ffmpeg_6_1")]
+    P212BE,
+    #[cfg(feature = "ffmpeg_6_1")]
+    P212LE,
+    #[cfg(feature = "ffmpeg_6_1")]
+    P412BE,
+    #[cfg(feature = "ffmpeg_6_1")]
+    P412LE,
+    #[cfg(feature = "ffmpeg_6_1")]
+    GBRAP14BE,
+    #[cfg(feature = "ffmpeg_6_1")]
+    GBRAP14LE,
+
     #[cfg(feature = "rpi")]
     SAND128,
     #[cfg(feature = "rpi")]
@@ -730,8 +774,52 @@ impl From<AVPixelFormat> for Pixel {
             #[cfg(feature = "ffmpeg_5_0")]
             AV_PIX_FMT_P416LE => Pixel::P416LE,
 
-            #[cfg(feature = "rpi")]
-            AV_PIX_FMT_RPI => Pixel::RPI,
+            #[cfg(feature = "ffmpeg_6_0")]
+            AV_PIX_FMT_VUYA => Pixel::VUYA,
+            #[cfg(feature = "ffmpeg_6_0")]
+            AV_PIX_FMT_RGBAF16BE => Pixel::RGBAF16BE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            AV_PIX_FMT_RGBAF16LE => Pixel::RGBAF16LE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            AV_PIX_FMT_VUYX => Pixel::VUYX,
+            #[cfg(feature = "ffmpeg_6_0")]
+            AV_PIX_FMT_P012LE => Pixel::P012LE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            AV_PIX_FMT_P012BE => Pixel::P012BE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            AV_PIX_FMT_Y212BE => Pixel::Y212BE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            AV_PIX_FMT_Y212LE => Pixel::Y212LE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            AV_PIX_FMT_XV30BE => Pixel::XV30BE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            AV_PIX_FMT_XV30LE => Pixel::XV30LE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            AV_PIX_FMT_XV36BE => Pixel::XV36BE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            AV_PIX_FMT_XV36LE => Pixel::XV36LE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            AV_PIX_FMT_RGBF32BE => Pixel::RGBF32BE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            AV_PIX_FMT_RGBF32LE => Pixel::RGBF32LE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            AV_PIX_FMT_RGBAF32BE => Pixel::RGBAF32BE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            AV_PIX_FMT_RGBAF32LE => Pixel::RGBAF32LE,
+
+            #[cfg(feature = "ffmpeg_6_1")]
+            AV_PIX_FMT_P212BE => Pixel::P212BE,
+            #[cfg(feature = "ffmpeg_6_1")]
+            AV_PIX_FMT_P212LE => Pixel::P212LE,
+            #[cfg(feature = "ffmpeg_6_1")]
+            AV_PIX_FMT_P412BE => Pixel::P412BE,
+            #[cfg(feature = "ffmpeg_6_1")]
+            AV_PIX_FMT_P412LE => Pixel::P412LE,
+            #[cfg(feature = "ffmpeg_6_1")]
+            AV_PIX_FMT_GBRAP14BE => Pixel::GBRAP14BE,
+            #[cfg(feature = "ffmpeg_6_1")]
+            AV_PIX_FMT_GBRAP14LE => Pixel::GBRAP14LE,
+
             #[cfg(feature = "rpi")]
             AV_PIX_FMT_SAND128 => Pixel::SAND128,
             #[cfg(feature = "rpi")]
@@ -1110,8 +1198,52 @@ impl From<Pixel> for AVPixelFormat {
             #[cfg(feature = "ffmpeg_5_0")]
             Pixel::P416LE => AV_PIX_FMT_P416LE,
 
-            #[cfg(feature = "rpi")]
-            Pixel::RPI => AV_PIX_FMT_RPI,
+            #[cfg(feature = "ffmpeg_6_0")]
+            Pixel::VUYA => AV_PIX_FMT_VUYA,
+            #[cfg(feature = "ffmpeg_6_0")]
+            Pixel::RGBAF16BE => AV_PIX_FMT_RGBAF16BE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            Pixel::RGBAF16LE => AV_PIX_FMT_RGBAF16LE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            Pixel::VUYX => AV_PIX_FMT_VUYX,
+            #[cfg(feature = "ffmpeg_6_0")]
+            Pixel::P012LE => AV_PIX_FMT_P012LE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            Pixel::P012BE => AV_PIX_FMT_P012BE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            Pixel::Y212BE => AV_PIX_FMT_Y212BE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            Pixel::Y212LE => AV_PIX_FMT_Y212LE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            Pixel::XV30BE => AV_PIX_FMT_XV30BE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            Pixel::XV30LE => AV_PIX_FMT_XV30LE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            Pixel::XV36BE => AV_PIX_FMT_XV36BE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            Pixel::XV36LE => AV_PIX_FMT_XV36LE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            Pixel::RGBF32BE => AV_PIX_FMT_RGBF32BE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            Pixel::RGBF32LE => AV_PIX_FMT_RGBF32LE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            Pixel::RGBAF32BE => AV_PIX_FMT_RGBAF32BE,
+            #[cfg(feature = "ffmpeg_6_0")]
+            Pixel::RGBAF32LE => AV_PIX_FMT_RGBAF32LE,
+
+            #[cfg(feature = "ffmpeg_6_1")]
+            Pixel::P212BE => AV_PIX_FMT_P212BE,
+            #[cfg(feature = "ffmpeg_6_1")]
+            Pixel::P212LE => AV_PIX_FMT_P212LE,
+            #[cfg(feature = "ffmpeg_6_1")]
+            Pixel::P412BE => AV_PIX_FMT_P412BE,
+            #[cfg(feature = "ffmpeg_6_1")]
+            Pixel::P412LE => AV_PIX_FMT_P412LE,
+            #[cfg(feature = "ffmpeg_6_1")]
+            Pixel::GBRAP14BE => AV_PIX_FMT_GBRAP14BE,
+            #[cfg(feature = "ffmpeg_6_1")]
+            Pixel::GBRAP14LE => AV_PIX_FMT_GBRAP14LE,
+
             #[cfg(feature = "rpi")]
             Pixel::SAND128 => AV_PIX_FMT_SAND128,
             #[cfg(feature = "rpi")]
